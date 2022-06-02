@@ -29,6 +29,7 @@ const colors = {
 
 export const getDatasets = (data, type) => ([
   {
+    type,
     label: 'Chart for test task',
     borderColor: 'rgb(255, 99, 132)',
     backgroundColor: colors[type],

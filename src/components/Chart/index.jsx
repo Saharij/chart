@@ -1,22 +1,9 @@
-import { useMemo } from 'react';
 import T from 'prop-types';
-import {
-  Chart as ChartJS,
-  // ArcElement,
-  // LinearScale,
-  // CategoryScale,
-  // BarElement,
-  // PointElement,
-  // LineElement,
-  // Legend,
-  // Tooltip,
-  registerables,
-} from 'chart.js';
+import { useMemo } from 'react';
 import { Chart as ReactChart } from 'react-chartjs-2';
+import { Chart as ChartJS, registerables } from 'chart.js';
 
-ChartJS.register(
-  ...registerables,
-);
+ChartJS.register(...registerables);
 
 const Chart = ({
   labels,
@@ -50,7 +37,7 @@ Chart.propTypes = {
     T.shape({
       label: T.string,
       borderColor: T.string,
-      backgroundColor: T.string,
+      backgroundColor: T.oneOfType([T.string, T.array]),
       borderWidth: T.number,
       data: T.array,
     }),
