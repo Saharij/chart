@@ -2,26 +2,20 @@ import { useMemo } from 'react';
 import T from 'prop-types';
 import {
   Chart as ChartJS,
-  ArcElement,
-  LinearScale,
-  CategoryScale,
-  BarElement,
-  PointElement,
-  LineElement,
-  Legend,
-  Tooltip,
+  // ArcElement,
+  // LinearScale,
+  // CategoryScale,
+  // BarElement,
+  // PointElement,
+  // LineElement,
+  // Legend,
+  // Tooltip,
+  registerables,
 } from 'chart.js';
 import { Chart as ReactChart } from 'react-chartjs-2';
 
 ChartJS.register(
-  ArcElement,
-  LinearScale,
-  CategoryScale,
-  BarElement,
-  PointElement,
-  LineElement,
-  Legend,
-  Tooltip
+  ...registerables,
 );
 
 const Chart = ({
